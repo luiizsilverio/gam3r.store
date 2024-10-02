@@ -3,7 +3,7 @@
 import { IconShoppingCartPlus } from '@tabler/icons-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Moeda, Produto } from '@/core';
+import { Moeda, Produto } from '@gstore/core';
 import NotaReview from '@/components/NotaReview';
 
 export interface ProdutoItemProps {

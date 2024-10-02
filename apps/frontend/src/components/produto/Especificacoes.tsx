@@ -1,5 +1,5 @@
-import { IconTag } from '@tabler/icons-react'
-import { Produto } from '@/core'
+import { IconTag } from '@tabler/icons-react';
+import { Produto } from '@gstore/core';
 import Tag from '@/components/Tag';
 
 export interface EspecificacoesProps {

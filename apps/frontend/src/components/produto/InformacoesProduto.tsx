@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Produto } from '@/core';
+import { Produto } from '@gstore/core';
 import Especificacoes from './Especificacoes';
 
 export interface InformacoesProdutoProps {

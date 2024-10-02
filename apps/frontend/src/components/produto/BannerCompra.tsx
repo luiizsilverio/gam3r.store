@@ -2,7 +2,7 @@
 
 import { IconCreditCard, IconShoppingCart } from '@tabler/icons-react';
 import { useRouter } from 'next/navigation';
-import { Moeda, Produto } from '@/core';
+import { Moeda, Produto } from '@gstore/core';
 // import useCarrinho from '@/data/hooks/useCarrinho'
 import useParcelamento from '@/data/hooks/useParcelamento';
 
