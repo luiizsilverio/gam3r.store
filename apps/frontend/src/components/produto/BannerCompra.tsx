@@ -19,10 +19,10 @@ export default function BannerCompra({ produto }: BannerCompraProps) {
     <div className="flex flex-col sm:flex-row gap-4">
       <div className='flex flex-1'>
       <div className="flex flex-col border-r border-zinc-500 pr-5">
-        <div className="line-through text-zinc-400">de R$ {produto.precoBase}</div>
+        <div className="line-through text-zinc-400">de {Moeda.formatar(produto.precoBase)}</div>
         <div className="text-2xl font-semibold">
           <span className="text-base text-zinc-300">por</span>{' '}
-          <span className="text-emerald-500">R$ {produto.precoPromo}</span>{' '}
+          <span className="text-emerald-500">{Moeda.formatar(produto.precoPromo)}</span>{' '}
           <span className="text-base text-zinc-300">à vista</span>
         </div>
       </div>
