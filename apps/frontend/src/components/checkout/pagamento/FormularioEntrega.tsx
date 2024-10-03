@@ -26,19 +26,23 @@ export default function FormularioEntrega(props: FormularioEntregaProps) {
                     value={entrega.nome}
                     onChange={alterarAtributo('nome')}
                     className="input"
+                    required
                 />
                 <div className="flex gap-5">
                     <input
+                        type="email"
                         placeholder="E-mail"
                         value={entrega.email}
                         onChange={alterarAtributo('email')}
                         className="input flex-1"
+                        required
                     />
                     <input
                         placeholder="CPF"
                         value={entrega.cpf}
                         onChange={alterarAtributo('cpf')}
                         className="input flex-1"
+                        required
                     />
                 </div>
                 <div className="flex gap-5">
@@ -47,12 +51,14 @@ export default function FormularioEntrega(props: FormularioEntregaProps) {
                         value={entrega.logradouro}
                         onChange={alterarAtributo('logradouro')}
                         className="input flex-1"
+                        required
                     />
                     <input
                         placeholder="Complemento"
                         value={entrega.complemento}
                         onChange={alterarAtributo('complemento')}
                         className="input"
+                        required
                     />
                 </div>
                 <div className="flex gap-5">
@@ -61,12 +67,14 @@ export default function FormularioEntrega(props: FormularioEntregaProps) {
                         value={entrega.cidade}
                         onChange={alterarAtributo('cidade')}
                         className="input flex-1"
+                        required
                     />
                     <input
                         placeholder="Estado"
                         value={entrega.estado}
                         onChange={alterarAtributo('estado')}
                         className="input flex-1"
+                        required
                     />
                 </div>
             </div>

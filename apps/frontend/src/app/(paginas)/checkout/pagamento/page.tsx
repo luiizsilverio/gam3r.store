@@ -14,6 +14,7 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-7 container">
       <CabecalhoCheckout passo="pagamento" />
+      
       <div className="flex gap-5">
         <div className="flex-1 flex flex-col gap-5">
           <SelecaoFormaPagamento
