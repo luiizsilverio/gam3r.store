@@ -1,10 +1,12 @@
 'use client'
 
-import { IconShoppingCartPlus } from '@tabler/icons-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { IconShoppingCartPlus } from '@tabler/icons-react';
 import { Moeda, Produto } from '@gstore/core';
 import NotaReview from '@/components/NotaReview';
+import useCarrinho from '@/data/hooks/useCarrinho';
+import useParcelamento from '@/data/hooks/useParcelamento';
 
 export interface ProdutoItemProps {
     produto: Produto;
@@ -12,6 +14,8 @@ export interface ProdutoItemProps {
 
 export default function ProdutoItem(props: ProdutoItemProps) {
   const { produto } = props;
+  const { adicionarItem } = useCarrinho();
+  const parcelamento = useParcelamento(props.produto.precoPromo);
 
   return (
     <Link
@@ -49,6 +53,10 @@ export default function ProdutoItem(props: ProdutoItemProps) {
           <span className="text-zinc-400 text-xs">
             até 6x de {Moeda.formatar(1.5)}
           </span>
+          <span className="text-zinc-400 text-xs">
+            até {parcelamento.qtdParcelas}x de{' '}
+            {Moeda.formatar(parcelamento.valorParcela)}
+          </span>
         </div>
 
         <button
@@ -58,8 +66,7 @@ export default function ProdutoItem(props: ProdutoItemProps) {
           `}
           onClick={(e) => {
             e.preventDefault()
-            console.log('Adicionar ao carrinho')
-            // adicionarItem(props.produto)
+            adicionarItem(props.produto)
           }}
         >
           <IconShoppingCartPlus size={20} />
