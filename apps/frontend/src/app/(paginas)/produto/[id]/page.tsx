@@ -13,7 +13,7 @@ export default function PaginaProduto(props: any) {
 
   return (
     produto ? (
-      <div className="flex flex-col w-[920px]" gap-20 py-10 style={{maxWidth: "90vw"}}>
+      <div className="flex flex-col w-[920px] gap-20 py-10" style={{maxWidth: "90vw"}}>
         <div className="flex flex-col gap-10">
           <TituloProduto      produto={produto} />
           <InformacoesProduto produto={produto} />

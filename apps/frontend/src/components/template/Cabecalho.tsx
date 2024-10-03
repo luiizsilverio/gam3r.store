@@ -1,11 +1,12 @@
+'use client'
+
 import Link from 'next/link';
 import Logo from '@/components/Logo';
 import IconeCarrinho from '@/components/IconeCarrinho';
-// import useCarrinho from '@/data/hooks/useCarrinho'
+import useCarrinho from '@/data/hooks/useCarrinho';
 
 export default function Cabecalho() {
-  const qtdeItens = 0;
-  // const { qtdItens } = useCarrinho()
+  const { qtdItens } = useCarrinho();
   
   return (
     <div
@@ -18,7 +19,7 @@ export default function Cabecalho() {
         <div className="flex justify-between items-center">
           <Logo />
           <Link href="/checkout/carrinho">
-              <IconeCarrinho qtdeItens={qtdeItens} />
+              <IconeCarrinho qtdItens={qtdItens} />
           </Link>
         </div>
       </div>

@@ -12,7 +12,7 @@ import {
 
 export interface ContextoCarrinhoProps {
   itens: ItemCarrinho[];
-  qtdeItens: number;
+  qtdItens: number;
   valorTotalCheio: number;
   valorTotal: number;
   parcelamento: Parcelamento;
@@ -58,7 +58,7 @@ export function ProvedorCarrinho(props: any) {
     <ContextoCarrinho.Provider
       value={{
         itens: carrinho.itens,
-        qtdeItens: carrinho.qtdeItens,
+        qtdItens: carrinho.qtdItens,
         valorTotal: carrinho.valorTotal,
         valorTotalCheio: carrinho.valorTotalCheio,
         parcelamento: new CalcularParcelamento().executar(

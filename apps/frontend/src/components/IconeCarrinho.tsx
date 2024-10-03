@@ -1,7 +1,7 @@
 import { IconShoppingCart } from '@tabler/icons-react';
 
 export interface IconeCarrinhoProps {
-  qtdeItens: number;
+  qtdItens: number;
 }
 
 export default function IconeCarrinho(props: IconeCarrinhoProps) {
@@ -12,7 +12,7 @@ export default function IconeCarrinho(props: IconeCarrinhoProps) {
         absolute top-2 right-2 bg-pink-500 text-white text-xs font-semibold rounded-full 
         w-5 h-5 flex items-center justify-center
       `}>
-        {props.qtdeItens ?? 0}
+        {props.qtdItens ?? 0}
       </div>
     </div>
   )

@@ -32,7 +32,7 @@ export default class Carrinho {
         return new Carrinho();
     }
 
-    get qtdeItens() {
+    get qtdItens() {
         return this.itens.map((item) => item.quantidade).reduce((a, b) => a + b, 0);
     }
 
