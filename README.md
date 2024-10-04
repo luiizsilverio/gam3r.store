@@ -29,7 +29,7 @@ Baixe o repositório com git clone e entre na pasta do projeto.
 $ git clone https://github.com/luiizsilverio/gam3r.store
 ```
 * Back-end
-  * Renomeie o arquivo __.env.example__ para __.env__.
+  * Renomeie o arquivo _.env.example_ para _.env_.
   * Informe a string de conexão do banco de dados.
 ```bash
 $ cd backend
